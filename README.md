@@ -1,7 +1,4 @@
 # Mohamed Hossam's Portfolio Website
-
-![Portfolio Preview](https://mo-hossam-stack.github.io/my-project/)
-
 A modern, responsive portfolio website showcasing my skills, projects, and professional information. Built with HTML, CSS, and JavaScript, this portfolio features a clean design with smooth animations and interactive elements.
 
 ## 🌐 Live Demo
