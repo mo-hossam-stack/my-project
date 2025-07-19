@@ -10,7 +10,10 @@ Visit the live website: [https://mo-hossam-stack.github.io/my-project/](https://
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Modern UI**: Clean and professional design with smooth animations
 - **Interactive Elements**: 
-  - Animated skill bars
+  - Animated skill icons with rotation effects
+  - Icon-based skills grid with Devicon and Font Awesome
+  - Enhanced Linux and GitHub icons for better visibility
+  - Custom spaCy badge for clear branding
   - Smooth scrolling navigation
   - Interactive project cards
   - Social media integration
@@ -27,6 +30,7 @@ Visit the live website: [https://mo-hossam-stack.github.io/my-project/](https://
   - CSS Animations
 - JavaScript (ES6+)
 - Font Awesome Icons
+- Devicon Icons
 - Google Fonts
 
 ## 📋 Sections
@@ -41,9 +45,10 @@ Visit the live website: [https://mo-hossam-stack.github.io/my-project/](https://
    - Personal background
 
 3. **Skills**
-   - Programming Languages
-   - Development Tools
-   - Computer Science Concepts
+   - **Icon-based skills grid**: Each skill is represented by a colorful, animated icon (using Devicon and Font Awesome)
+   - **Enhanced Linux and GitHub icons**: Improved contrast and style for dark backgrounds
+   - **Custom spaCy badge**: Blue badge for spaCy skill for better visibility
+   - Programming Languages, Development Tools, Computer Science Concepts
 
 4. **Projects**
    - Project showcase
@@ -80,6 +85,7 @@ To customize this portfolio for your own use:
 3. Adjust animations and interactions in `script.js`
 4. Replace the profile photo with your own
 5. Update the projects section with your own projects
+6. Add or update skill icons in the Skills section (see Devicon and Font Awesome for more icons)
 
 ## 📄 License
 
@@ -94,7 +100,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- Font Awesome for the icons
+- [Font Awesome](https://fontawesome.com/) for the icons
+- [Devicon](https://devicon.dev/) for technology and tool icons
 - Google Fonts for the typography
 - All contributors and supporters of the project
 
