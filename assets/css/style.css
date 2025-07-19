@@ -1152,3 +1152,137 @@ section {
         font-size: 1.2rem;
     }
 }
+
+.skills-section {
+  padding: 60px 0;
+  text-align: center;
+  background: #111 url('https://raw.githubusercontent.com/divyanshkathuria/divyanshkathuria/main/src/assets/stars.svg') repeat top center;
+  background-size: cover;
+}
+.skills-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.skill-item {
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.4);
+  padding: 32px 24px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  min-height: 140px;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+}
+.skill-item i {
+  font-size: 4.2rem;
+  margin-bottom: 16px;
+  color: inherit;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), filter 0.3s;
+  will-change: transform;
+  filter: drop-shadow(0 2px 8px #0008);
+}
+.skill-item span {
+  font-size: 1.15rem;
+  margin-top: 2px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+.skill-item:hover,
+.skill-item:focus,
+.skill-item.active {
+  box-shadow: 0 8px 32px 0 #00ffd5a0, 0 4px 24px 0 rgba(0,0,0,0.4);
+}
+.skill-item:hover i,
+.skill-item:focus i,
+.skill-item.active i {
+  transform: rotateY(360deg) scale(1.18);
+  filter: drop-shadow(0 0 16px #00ffd5cc);
+}
+.linux-emoji {
+  font-size: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px #0008);
+}
+.spacy-badge {
+  display: inline-block;
+  background: #09A3D5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.2rem;
+  padding: 12px 24px 10px 24px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #0008;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), filter 0.3s;
+  will-change: transform;
+}
+.skill-item:hover .spacy-badge,
+.skill-item:focus .spacy-badge,
+.skill-item.active .spacy-badge {
+  transform: rotateY(360deg) scale(1.18);
+  filter: drop-shadow(0 0 16px #00ffd5cc);
+}
+.skill-item .devicon-linux-plain {
+  font-size: 4.6rem;
+  background: radial-gradient(circle, #f7e38a 70%, #f7d038 100%);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 0 10px 2px #f7d03844;
+  color: #111;
+  margin-bottom: 16px;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), filter 0.3s;
+  will-change: transform;
+}
+.skill-item:hover .devicon-linux-plain,
+.skill-item:focus .devicon-linux-plain,
+.skill-item.active .devicon-linux-plain {
+  filter: drop-shadow(0 0 8px #f7d03888);
+  transform: rotateY(360deg) scale(1.18);
+}
+.skill-item .devicon-github-original {
+  font-size: 4.6rem;
+  background: radial-gradient(circle, #eaeaea 70%, #bdbdbd 100%);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 0 10px 2px #bdbdbd44;
+  color: #111;
+  margin-bottom: 16px;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), filter 0.3s;
+  will-change: transform;
+}
+.skill-item:hover .devicon-github-original,
+.skill-item:focus .devicon-github-original,
+.skill-item.active .devicon-github-original {
+  filter: drop-shadow(0 0 8px #bdbdbd88);
+  transform: rotateY(360deg) scale(1.18);
+}
+@media (max-width: 900px) {
+  .skills-grid {
+    gap: 24px 16px;
+  }
+  .skill-item {
+    min-width: 90px;
+    padding: 20px 10px 10px 10px;
+  }
+  .skill-item i {
+    font-size: 2.5rem;
+  }
+}
