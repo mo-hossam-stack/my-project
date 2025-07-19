@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Add touch support for skill icons
+        skillItems.forEach(item => {
+            item.addEventListener('touchstart', function () {
+                this.classList.add('active');
+                setTimeout(() => {
+                    this.classList.remove('active');
+                }, 500); // Match the CSS animation duration
+            });
+        });
+
         // Intersection Observer for skills section
         if (skillsSection) {
             const skillsObserver = new IntersectionObserver((entries) => {
