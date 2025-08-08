@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     try {
-        // Handle loader
+
+
+        
         const loader = document.querySelector('.loader');
         if (loader) {
             window.addEventListener('load', () => {
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Initialize smooth scroll for navigation links
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -150,53 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', setViewportHeight);
         window.addEventListener('orientationchange', setViewportHeight);
 
-        // Scroll reveal animation for sections
-        const sections = document.querySelectorAll('section');
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                        
-                        // Handle project cards
-                        if (entry.target.id === 'projects') {
-                            const projectsGrid = entry.target.querySelector('.projects-grid');
-                            const projectCards = entry.target.querySelectorAll('.project-card');
-                            
-                            if (projectsGrid) {
-                                projectsGrid.classList.add('visible');
-                            }
-                            
-                            projectCards.forEach((card, cardIndex) => {
-                                setTimeout(() => {
-                                    card.classList.add('visible');
-                                }, cardIndex * 200);
-                            });
-                        }
-                    }, index * 100);
-                }
-            });
-        }, {
-            threshold: 0.2,
-            rootMargin: '-50px'
-        });
 
-        sections.forEach(section => {
-            sectionObserver.observe(section);
-        });
 
-        // Hover effect for project cards
-        const projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px)';
-                card.style.boxShadow = '0 15px 30px rgba(255, 0, 85, 0.3)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '0 5px 15px rgba(255, 0, 85, 0.3)';
-            });
-        });
+
 
         // Add cursor effect
         const cursor = document.createElement('div');
@@ -219,53 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Contact section animations
-        const contactSection = document.querySelector('.contact-section');
-        const contactCards = document.querySelectorAll('.contact-card');
-        const socialCards = document.querySelectorAll('.social-card');
 
-        if (contactSection) {
-            const contactObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        contactCards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, index * 200);
-                        });
-
-                        socialCards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, (contactCards.length * 200) + (index * 100));
-                        });
-
-                        contactObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2,
-                rootMargin: '-50px'
-            });
-
-            contactObserver.observe(contactSection);
-        }
-
-        // Initialize contact cards with opacity 0
-        contactCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.5s ease';
-        });
-
-        // Initialize social cards with opacity 0
-        socialCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.5s ease';
-        });
     } catch (error) {
         console.error('Error in script:', error);
     }
